@@ -1,0 +1,9 @@
+{
+  "name": "com.antiphishing.native_host",
+  "description": "Native host para Extensão Anti-Phishing",
+  "path": "C:\\Users\\Moises Prado\\extensao-antiphishing\\native_host.py",
+  "type": "stdio",
+  "allowed_origins": [
+    "chrome-extension://edmhaimfaafiagcclepfehklgcbanaeg/"
+  ]
+}

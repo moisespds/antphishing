@@ -1,17 +1,24 @@
 {
-    "manifest_version": 3,
-    "name": "Proteção contra Phishing",
-    "version": "1.0",
-    "permissions": ["activeTab", "cookies", "webRequest", "storage"],
-    "host_permissions": ["<all_urls>"],
-    "background": {
-      "service_worker": "background.js"
-    },
-    "content_scripts": [
-      {
-        "matches": ["<all_urls>"],
-        "js": ["content.js"]
-      }
-    ]
+  "manifest_version": 3,
+  "name": "Proteção contra Phishing",
+  "version": "1.0",
+  "description": "Extensão para detectar páginas falsas e proteger o usuário contra phishing.",
+  "permissions": ["activeTab", "cookies", "storage", "notifications", "webRequest", "scripting", "tabs"],
+  "host_permissions": [
+    "<all_urls>",
+    "http://localhost:3000/*",
+    "http://127.0.0.1:3000/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "icons": {
+    "128": "alert_icon.png"
   }
-  
+}
